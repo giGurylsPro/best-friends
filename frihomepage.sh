@@ -16,15 +16,23 @@ echo -e "\033[31;4mEndPoint\033[0m";read endpoint
 
 wget --no-check-certificate https://raw.githubusercontent.com/giGurylsPro/best-friends/master/frirandom.sh
 
+cd
+
 chmod +x frirandom.sh
+
+sed -i 's/\r//' frirandom.sh
 
 sed -e "s/MAXCOUNT=4200/MAXCOUNT=$adet/" /root/frirandom.sh > /root/random1.sh
 
 chmod +x random1.sh
 
+sed -i 's/\r//' random1.sh
+
 sed -e "s/network=2001:470:1f0f:a7/network=$ipv6/" /root/random1.sh > /root/random2.sh
 
 chmod +x random2.sh
+
+sed -i 's/\r//' random2.sh
 
 ./random2.sh > ip.list
 
