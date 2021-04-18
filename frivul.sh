@@ -21,12 +21,11 @@ auto $ipvtur
 iface $ipvtur inet dhcp
 iface $ipvtur inet6 auto
 
-auto he-ipv6
-iface he-ipv6 inet6 v4tunnel
-        address $ipv6::2
-        netmask 64
-        endpoint $endpoint
-        local $ipv4
-        ttl 255
-        gateway $ipv6::1
+auto sbtb-ipv6
+ iface sbtb-ipv6 inet6 v4tunnel
+  address $ipv6::2/64
+  endpoint $endpoint
+  local $ipv4
+  ttl 255
+  gateway $ipv6::1
 END
