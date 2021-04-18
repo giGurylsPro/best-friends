@@ -93,23 +93,23 @@ cat > 3proxy.sh << END
 #!/bin/bash
 
 echo daemon
-echo maxconn 20000
-echo nserver 198.153.192.1
-echo nserver 198.153.194.1
+echo maxconn 10000
 echo nscache 65536
 echo timeouts 1 5 30 60 180 1800 15 60
 echo setgid 65535
 echo setuid 65535
-echo stacksize 6000
 echo flush
+echo auth strong
+echo users test12:CL:dldldl
+echo allow test12
 
 port=$port1
 count=1
-for i in \$(cat /root/ip.list); do
+for i in `cat /root/ip.list`; do
     echo "$turuset -6 -s0 -n -a -p\$port -i$ipv4 -e\$i"
     ((port+=1))
     ((count+=1))
-    if [ \$count -eq 10001 ]; then
+    if [ $count -eq 10001 ]; then
         exit
     fi
 done
