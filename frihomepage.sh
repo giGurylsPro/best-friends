@@ -93,15 +93,15 @@ cat > 3proxy.sh << END
 #!/bin/bash
 
 echo daemon
-echo maxconn 10000
+echo maxconn 20000
+echo nserver 77.88.8.8
+echo nserver 77.88.8.1
 echo nscache 65536
 echo timeouts 1 5 30 60 180 1800 15 60
 echo setgid 65535
 echo setuid 65535
+echo stacksize 6000
 echo flush
-echo auth strong
-echo users test12:CL:dldldl
-echo allow test12
 
 port=$port1
 count=1
