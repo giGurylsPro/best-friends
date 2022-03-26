@@ -66,17 +66,9 @@ END
 ndppd -d -c /root/ndppd/ndppd.conf
 
 cd ~
+cd ~
 git clone https://github.com/z3APA3A/3proxy.git
-cd /root/3proxy/
-rm -r man
-rm -r src
-cd /root/3proxy/
-curl -O https://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@github.com/giGurylsPro/best-friends/raw/master/frirarman.zip
-unzip frirarman.zip
-chmod +x bin/
-touch bin/define.txt
-echo "#define ANONYMOUS 1" > bin/define.txt
-sed -i "31r bin/define.txt" bin/proxy.h
+cd 3proxy/
 make -f Makefile.Linux
 
 cat > 3proxy.sh << END
@@ -95,7 +87,8 @@ echo flush
 
 port=$port1
 count=1
-for i in `cat /root/ip.list`; do
+as=echo cat /root/ip.list
+for i in `\$(as)`; do
     echo "$turuset -6 -s0 -n -a -p\$port -i$ipv4 -e\$i"
     ((port+=1))
     ((count+=1))
