@@ -12,8 +12,6 @@ echo -e "\033[31;4mEnter Ipv6\033[0m";read ipv6
 
 echo -e "\033[31;4mIf the Proxy type is http, type proxy, and if socks5, type socks, press enter.\033[0m";read turuset
 
-echo -e "\033[31;4mEndPoint\033[0m";read endpoint
-
 curl -O https://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@raw.githubusercontent.com/giGurylsPro/best-friends/master/frirandom.sh
 
 cd
@@ -71,7 +69,7 @@ git clone https://github.com/z3APA3A/3proxy.git
 cd 3proxy/
 make -f Makefile.Linux
 
-cat > 3proxy.sh << END
+cat > /root/3proxy/3proxy.sh << END
 #!/bin/bash
 
 echo daemon
@@ -98,9 +96,9 @@ for i in `\$(as)`; do
 done
 END
 
-chmod +x 3proxy.sh
+chmod +x /root/3proxy/3proxy.sh
 
-./3proxy.sh > 3proxy.cfg
+./root/3proxy/3proxy.sh > /root/3proxy/3proxy.cfg
 
 ulimit -n 600000
 ulimit -u 600000
