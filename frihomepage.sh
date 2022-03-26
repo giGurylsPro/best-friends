@@ -46,16 +46,6 @@ apt install build-essential -y
 
 apt install git
 
-wget --no-check-certificate https://raw.githubusercontent.com/giGurylsPro/best-friends/master/fripartner.sh
-
-chmod +x fripartner.sh
-
-sed -i -e 's/\r$//' fripartner.sh
-
-./fripartner.sh
-
-systemctl restart networking
-
 cd ~
 git clone https://github.com/DanielAdolfsson/ndppd.git
 cd ~/ndppd
