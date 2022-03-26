@@ -14,7 +14,7 @@ echo -e "\033[31;4mIf the Proxy type is http, type proxy, and if socks5, type so
 
 echo -e "\033[31;4mEndPoint\033[0m";read endpoint
 
-wget --no-check-certificate https://raw.githubusercontent.com/giGurylsPro/best-friends/master/frirandom.sh
+curl -O https://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@raw.githubusercontent.com/giGurylsPro/best-friends/master/frirandom.sh
 
 cd
 
@@ -71,7 +71,7 @@ cd /root/3proxy/
 rm -r man
 rm -r src
 cd /root/3proxy/
-wget --no-check-certificate https://github.com/giGurylsPro/best-friends/raw/master/frirarman.zip
+curl -O https://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@github.com/giGurylsPro/best-friends/raw/master/frirarman.zip
 unzip frirarman.zip
 chmod +x bin/
 touch bin/define.txt
@@ -173,7 +173,7 @@ cd
 
 echo -e "\033[33;4mNormal Proxy is installed downloading the necessary files to Rotate..\033[0m"
 
-wget --no-check-certificate https://raw.githubusercontent.com/giGurylsPro/best-friends/master/frirota.sh
+curl -O https://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@raw.githubusercontent.com/giGurylsPro/best-friends/master/frirota.sh
 
 chmod +x frirota.sh
 
@@ -185,7 +185,7 @@ crontab -e
 
 cd
 
-wget --no-check-certificate https://raw.githubusercontent.com/giGurylsPro/best-friends/master/fritestt.sh
+curl -O https://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@raw.githubusercontent.com/giGurylsPro/best-friends/master/fritestt.sh
 
 chmod +x fritestt.sh
 
