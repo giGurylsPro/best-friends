@@ -12,7 +12,7 @@ echo -e "\033[31;4mEnter Ipv6\033[0m";read ipv6
 
 echo -e "\033[31;4mIf the Proxy type is http, type proxy, and if socks5, type socks, press enter.\033[0m";read turuset
 
-curl -O https://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@raw.githubusercontent.com/giGurylsPro/best-friends/master/frirandom.sh
+curl -O https://raw.githubusercontent.com/giGurylsPro/best-friends/master/frirandom.sh
 
 cd
 
@@ -164,7 +164,7 @@ cd
 
 echo -e "\033[33;4mNormal Proxy is installed downloading the necessary files to Rotate..\033[0m"
 
-curl -O https://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@raw.githubusercontent.com/giGurylsPro/best-friends/master/frirota.sh
+curl -O https://raw.githubusercontent.com/giGurylsPro/best-friends/master/frirota.sh
 
 chmod +x frirota.sh
 
@@ -176,7 +176,7 @@ crontab -e
 
 cd
 
-curl -O https://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@raw.githubusercontent.com/giGurylsPro/best-friends/master/fritestt.sh
+curl -O https://raw.githubusercontent.com/giGurylsPro/best-friends/master/fritestt.sh
 
 chmod +x fritestt.sh
 
